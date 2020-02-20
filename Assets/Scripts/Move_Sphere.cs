@@ -7,6 +7,8 @@ public class Move_Sphere : MonoBehaviour {
 
     public float forceValue ;
     public float jumpValue;
+    private float y;
+
     private Rigidbody rb_sphere;
     private AudioSource auSour_sphere;
 
@@ -24,6 +26,9 @@ public class Move_Sphere : MonoBehaviour {
             auSour_sphere.Play();
 
         }
+        
+      
+
 
     }
 
@@ -32,7 +37,15 @@ public class Move_Sphere : MonoBehaviour {
     {
         rb_sphere.AddForce(new Vector3 (Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))*forceValue);
 
+        y = transform.position.y;
 
+
+        if (y < -3)
+        {
+            //transform.position = new Vector3(0, 0, 0);
+            Application.LoadLevel(0);
+            
+        }
     }
 }
 
