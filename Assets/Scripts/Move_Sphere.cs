@@ -40,12 +40,7 @@ public class Move_Sphere : MonoBehaviour {
         y = transform.position.y;
 
 
-        if (y < -3)
-        {
-            //transform.position = new Vector3(0, 0, 0);
-            Application.LoadLevel(0);
-            
-        }
+        
     }
 }
 
