@@ -13,6 +13,7 @@ public class Move_Sphere : MonoBehaviour {
     private AudioSource auSour_sphere;
 
     void Start() {
+        
         rb_sphere = GetComponent<Rigidbody>();
         auSour_sphere=GetComponent<AudioSource>();
 
@@ -26,9 +27,9 @@ public class Move_Sphere : MonoBehaviour {
             auSour_sphere.Play();
 
         }
-        
-      
 
+
+        
 
     }
 
